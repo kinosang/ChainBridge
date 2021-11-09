@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	ethtest "github.com/ChainSafe/ChainBridge/shared/ethereum/testing"
-	"github.com/ChainSafe/chainbridge-utils/core"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
-	"github.com/ChainSafe/chainbridge-utils/msg"
 	"github.com/ethereum/go-ethereum/common"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethtest "github.com/kinosang/ChainBridge/shared/ethereum/testing"
+	"github.com/kinosang/chainbridge-utils/core"
+	"github.com/kinosang/chainbridge-utils/keystore"
+	"github.com/kinosang/chainbridge-utils/msg"
 )
 
 func TestChain_ListenerShutdownOnFailure(t *testing.T) {

@@ -7,13 +7,13 @@ import (
 	"fmt"
 	"sync"
 
-	utils "github.com/ChainSafe/ChainBridge/shared/substrate"
-	"github.com/ChainSafe/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
-	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v3"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/rpc/author"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/signature"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	utils "github.com/kinosang/ChainBridge/shared/substrate"
+	"github.com/kinosang/chainbridge-utils/msg"
+	gsrpc "github.com/kinosang/go-substrate-rpc-client/v3"
+	"github.com/kinosang/go-substrate-rpc-client/v3/rpc/author"
+	"github.com/kinosang/go-substrate-rpc-client/v3/signature"
+	"github.com/kinosang/go-substrate-rpc-client/v3/types"
 )
 
 type Connection struct {
@@ -194,7 +194,7 @@ func (c *Connection) getConst(prefix, name string, res interface{}) error {
 
 func (c *Connection) checkChainId(expected msg.ChainId) error {
 	var actual msg.ChainId
-	err := c.getConst(utils.BridgePalletName, "ChainIdentity", &actual)
+	err := c.getConst(utils.BridgePalletName, "ChainId", &actual)
 	if err != nil {
 		return err
 	}

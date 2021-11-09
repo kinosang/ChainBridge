@@ -7,13 +7,13 @@ import (
 	"context"
 	"math/big"
 
-	"github.com/ChainSafe/ChainBridge/bindings/GenericHandler"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kinosang/ChainBridge/bindings/GenericHandler"
 
-	bridge "github.com/ChainSafe/ChainBridge/bindings/Bridge"
-	erc20Handler "github.com/ChainSafe/ChainBridge/bindings/ERC20Handler"
-	erc721Handler "github.com/ChainSafe/ChainBridge/bindings/ERC721Handler"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
+	bridge "github.com/kinosang/ChainBridge/bindings/Bridge"
+	erc20Handler "github.com/kinosang/ChainBridge/bindings/ERC20Handler"
+	erc721Handler "github.com/kinosang/ChainBridge/bindings/ERC721Handler"
+	"github.com/kinosang/chainbridge-utils/keystore"
 )
 
 var (

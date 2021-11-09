@@ -7,12 +7,12 @@ import (
 	"os"
 	"testing"
 
-	utils "github.com/ChainSafe/ChainBridge/shared/substrate"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
-	"github.com/ChainSafe/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
 	"github.com/ethereum/go-ethereum/common/hexutil"
+	utils "github.com/kinosang/ChainBridge/shared/substrate"
+	"github.com/kinosang/chainbridge-utils/keystore"
+	"github.com/kinosang/chainbridge-utils/msg"
+	"github.com/kinosang/go-substrate-rpc-client/v3/types"
 )
 
 const TestEndpoint = "ws://127.0.0.1:9944"

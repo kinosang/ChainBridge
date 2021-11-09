@@ -10,19 +10,19 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ChainSafe/ChainBridge/bindings/Bridge"
-	"github.com/ChainSafe/ChainBridge/bindings/ERC20Handler"
-	"github.com/ChainSafe/ChainBridge/bindings/ERC721Handler"
-	"github.com/ChainSafe/ChainBridge/bindings/GenericHandler"
-	"github.com/ChainSafe/ChainBridge/chains"
-	utils "github.com/ChainSafe/ChainBridge/shared/ethereum"
-	"github.com/ChainSafe/chainbridge-utils/blockstore"
-	metrics "github.com/ChainSafe/chainbridge-utils/metrics/types"
-	"github.com/ChainSafe/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
 	eth "github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	ethcommon "github.com/ethereum/go-ethereum/common"
+	"github.com/kinosang/ChainBridge/bindings/Bridge"
+	"github.com/kinosang/ChainBridge/bindings/ERC20Handler"
+	"github.com/kinosang/ChainBridge/bindings/ERC721Handler"
+	"github.com/kinosang/ChainBridge/bindings/GenericHandler"
+	"github.com/kinosang/ChainBridge/chains"
+	utils "github.com/kinosang/ChainBridge/shared/ethereum"
+	"github.com/kinosang/chainbridge-utils/blockstore"
+	metrics "github.com/kinosang/chainbridge-utils/metrics/types"
+	"github.com/kinosang/chainbridge-utils/msg"
 )
 
 var BlockRetryInterval = time.Second * 5

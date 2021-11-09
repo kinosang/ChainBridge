@@ -3,10 +3,9 @@
 <a href="https://discord.gg/ykXsJKfhgq">
   <img alt="discord" src="https://img.shields.io/discord/593655374469660673?label=Discord&logo=discord&style=flat" />
 </a>
-<a href="https://github.com/ChainSafe/ChainBridge/actions">
-  <img alt="build status" src="https://github.com/ChainSafe/ChainBridge/workflows/Tests/badge.svg?branch=master" />
+<a href="https://github.com/kinosang/ChainBridge/actions">
+  <img alt="build status" src="https://github.com/kinosang/ChainBridge/workflows/Tests/badge.svg?branch=master" />
 </a>
-
 
 # Contents
 
@@ -18,6 +17,7 @@
 - [Simulations](#simulations)
 
 # Getting Started
+
 - Check out our [documentation](https://chainbridge.chainsafe.io).
 - Try [running ChainBridge locally](https://chainbridge.chainsafe.io/local/).
 - Chat with us on [discord](https://discord.gg/ykXsJKfhgq).
@@ -26,9 +26,8 @@
 
 ## Dependencies
 
-- [Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey): 
-Used for substrate key management. Only required if connecting to a substrate chain.
-
+- [Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey):
+  Used for substrate key management. Only required if connecting to a substrate chain.
 
 ## Building
 
@@ -38,7 +37,8 @@ Used for substrate key management. Only required if connecting to a substrate ch
 
 `make install`: Uses `go install` to add `chainbridge` to your GOBIN.
 
-## Docker 
+## Docker
+
 The official ChainBridge Docker image can be found here.
 
 To build the Docker image locally run:
@@ -49,7 +49,7 @@ docker build -t chainsafe/chainbridge .
 
 To start ChainBridge:
 
-``` 
+```
 docker run -v ./config.json:/config.json chainsafe/chainbridge
 ```
 
@@ -70,7 +70,7 @@ A chain configurations take this form:
 }
 ```
 
-See `config.json.example` for an example configuration. 
+See `config.json.example` for an example configuration.
 
 ### Ethereum Options
 
@@ -106,7 +106,7 @@ Substrate supports the following additonal options:
 
 ## Blockstore
 
-The blockstore is used to record the last block the relayer processed, so it can pick up where it left off. 
+The blockstore is used to record the last block the relayer processed, so it can pick up where it left off.
 
 If a `startBlock` option is provided (see [Configuration](#configuration)), then the greater of `startBlock` and the latest block in the blockstore is used at startup.
 
@@ -122,7 +122,7 @@ To import external ethereum keys, such as those generated with geth, use `chainb
 
 To import private keys as keystores, use `chainbridge account import --privateKey key`.
 
-For testing purposes, chainbridge provides 5 test keys. The can be used with `--testkey <name>`, where `name` is one of `Alice`, `Bob`, `Charlie`, `Dave`, or `Eve`. 
+For testing purposes, chainbridge provides 5 test keys. The can be used with `--testkey <name>`, where `name` is one of `Alice`, `Bob`, `Charlie`, `Dave`, or `Eve`.
 
 ## Metrics
 
@@ -130,15 +130,15 @@ See [metrics.md](/docs/metrics.md).
 
 # Chain Implementations
 
-- Ethereum (Solidity): [chainbridge-solidity](https://github.com/ChainSafe/chainbridge-solidity) 
+- Ethereum (Solidity): [chainbridge-solidity](https://github.com/kinosang/chainbridge-solidity)
 
-    The Solidity contracts required for chainbridge. Includes deployment and interaction CLI.
-    
-    The bindings for the contracts live in `bindings/`. To update the bindings modify `scripts/setup-contracts.sh` and then run `make clean && make setup-contracts`
+  The Solidity contracts required for chainbridge. Includes deployment and interaction CLI.
 
-- Substrate: [chainbridge-substrate](https://github.com/ChainSafe/chainbridge-substrate)
+  The bindings for the contracts live in `bindings/`. To update the bindings modify `scripts/setup-contracts.sh` and then run `make clean && make setup-contracts`
 
-    A substrate pallet that can be integrated into a chain, as well as an example pallet to demonstrate chain integration.
+- Substrate: [chainbridge-substrate](https://github.com/kinosang/chainbridge-substrate)
+
+  A substrate pallet that can be integrated into a chain, as well as an example pallet to demonstrate chain integration.
 
 # Docs
 
@@ -146,24 +146,28 @@ MKdocs will generate static HTML files for Chainsafe markdown files located in `
 
 `make install-mkdocs`: Pull the docker image MkDocs
 
-`make mkdocs`: Run MkDoc's docker image, building and hosting the html files on `localhost:8000`  
+`make mkdocs`: Run MkDoc's docker image, building and hosting the html files on `localhost:8000`
 
 # Testing
 
-Unit tests require an ethereum node running on `localhost:8545` and a substrate node running on `localhost:9944`. E2E tests require an additional ethereum node on `localhost:8546`. 
+Unit tests require an ethereum node running on `localhost:8545` and a substrate node running on `localhost:9944`. E2E tests require an additional ethereum node on `localhost:8546`.
 
 A docker-compose file is provided to run two Geth nodes and a chainbridge-substrate-chain node in isolated environments:
+
 ```
 $ docker-compose -f ./docker-compose-e2e.yml up
 ```
 
-See [chainbridge-solidity](https://github.com/chainsafe/chainbridge-solidity) and [chainbridge-substrate-chain](https://github.com/ChainSafe/chainbridge-substrate-chain) for more information on testing facilities.
+See [chainbridge-solidity](https://github.com/kinosang/chainbridge-solidity) and [chainbridge-substrate-chain](https://github.com/kinosang/chainbridge-substrate-chain) for more information on testing facilities.
 
 All Go tests can be run with:
+
 ```
 $ make test
 ```
+
 Go tests specifically for ethereum, substrate and E2E can be run with
+
 ```
 $ make test-eth
 $ make test-sub
@@ -175,7 +179,7 @@ $ make test-e2e
 ## Reporting a Security Bug
 
 We take all security issues seriously, if you believe you have found a security issue within a ChainSafe
-project please notify us immediately. If an issue is confirmed, we will take all necessary precautions 
+project please notify us immediately. If an issue is confirmed, we will take all necessary precautions
 to ensure a statement and patch release is made in a timely manner.
 
 Please email us a description of the flaw and any related information (e.g. reproduction steps, version) to

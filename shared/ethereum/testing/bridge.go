@@ -6,9 +6,9 @@ package ethtest
 import (
 	"testing"
 
-	utils "github.com/ChainSafe/ChainBridge/shared/ethereum"
-	"github.com/ChainSafe/chainbridge-utils/msg"
 	"github.com/ethereum/go-ethereum/common"
+	utils "github.com/kinosang/ChainBridge/shared/ethereum"
+	"github.com/kinosang/chainbridge-utils/msg"
 )
 
 func RegisterResource(t *testing.T, client *utils.Client, bridge, handler common.Address, rId msg.ResourceId, addr common.Address) {

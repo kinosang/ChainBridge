@@ -8,13 +8,13 @@ import (
 	"math/big"
 	"testing"
 
-	eth "github.com/ChainSafe/ChainBridge/e2e/ethereum"
-	sub "github.com/ChainSafe/ChainBridge/e2e/substrate"
-	utils "github.com/ChainSafe/ChainBridge/shared/ethereum"
-	ethtest "github.com/ChainSafe/ChainBridge/shared/ethereum/testing"
-	subtest "github.com/ChainSafe/ChainBridge/shared/substrate/testing"
 	log "github.com/ChainSafe/log15"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	eth "github.com/kinosang/ChainBridge/e2e/ethereum"
+	sub "github.com/kinosang/ChainBridge/e2e/substrate"
+	utils "github.com/kinosang/ChainBridge/shared/ethereum"
+	ethtest "github.com/kinosang/ChainBridge/shared/ethereum/testing"
+	subtest "github.com/kinosang/ChainBridge/shared/substrate/testing"
+	"github.com/kinosang/go-substrate-rpc-client/v3/types"
 )
 
 func testErc20ToSubstrate(t *testing.T, ctx *testContext) {

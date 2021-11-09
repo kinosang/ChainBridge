@@ -6,10 +6,10 @@ package utils
 import (
 	"math/big"
 
-	"github.com/ChainSafe/ChainBridge/bindings/ERC20Handler"
-	ERC20 "github.com/ChainSafe/ChainBridge/bindings/ERC20PresetMinterPauser"
-	"github.com/ChainSafe/chainbridge-utils/msg"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kinosang/ChainBridge/bindings/ERC20Handler"
+	ERC20 "github.com/kinosang/ChainBridge/bindings/ERC20PresetMinterPauser"
+	"github.com/kinosang/chainbridge-utils/msg"
 )
 
 // DeployMintAndApprove deploys a new erc20 contract, mints to the deployer, and approves the erc20 handler to transfer those token.

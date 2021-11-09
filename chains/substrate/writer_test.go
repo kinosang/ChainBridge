@@ -8,11 +8,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/kinosang/go-substrate-rpc-client/v3/types"
 
-	utils "github.com/ChainSafe/ChainBridge/shared/substrate"
-	subtest "github.com/ChainSafe/ChainBridge/shared/substrate/testing"
-	message "github.com/ChainSafe/chainbridge-utils/msg"
+	utils "github.com/kinosang/ChainBridge/shared/substrate"
+	subtest "github.com/kinosang/ChainBridge/shared/substrate/testing"
+	message "github.com/kinosang/chainbridge-utils/msg"
 )
 
 func assertProposalState(t *testing.T, conn *Connection, prop *proposal, votes *voteState, hasValue bool) {

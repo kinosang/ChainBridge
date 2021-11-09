@@ -9,13 +9,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/ChainBridge/bindings/Bridge"
-	connection "github.com/ChainSafe/ChainBridge/connections/ethereum"
-	utils "github.com/ChainSafe/ChainBridge/shared/ethereum"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
-	"github.com/ChainSafe/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kinosang/ChainBridge/bindings/Bridge"
+	connection "github.com/kinosang/ChainBridge/connections/ethereum"
+	utils "github.com/kinosang/ChainBridge/shared/ethereum"
+	"github.com/kinosang/chainbridge-utils/keystore"
+	"github.com/kinosang/chainbridge-utils/msg"
 )
 
 const TestEndpoint = "ws://localhost:8545"

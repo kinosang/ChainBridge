@@ -11,13 +11,13 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ChainSafe/ChainBridge/config"
-	"github.com/ChainSafe/chainbridge-utils/crypto"
-	"github.com/ChainSafe/chainbridge-utils/crypto/secp256k1"
-	"github.com/ChainSafe/chainbridge-utils/crypto/sr25519"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
 	log "github.com/ChainSafe/log15"
 	gokeystore "github.com/ethereum/go-ethereum/accounts/keystore"
+	"github.com/kinosang/ChainBridge/config"
+	"github.com/kinosang/chainbridge-utils/crypto"
+	"github.com/kinosang/chainbridge-utils/crypto/secp256k1"
+	"github.com/kinosang/chainbridge-utils/crypto/sr25519"
+	"github.com/kinosang/chainbridge-utils/keystore"
 	"github.com/urfave/cli/v2"
 )
 

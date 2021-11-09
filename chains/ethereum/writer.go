@@ -4,16 +4,16 @@
 package ethereum
 
 import (
-	"github.com/ChainSafe/ChainBridge/bindings/Bridge"
-	"github.com/ChainSafe/chainbridge-utils/core"
-	metrics "github.com/ChainSafe/chainbridge-utils/metrics/types"
-	"github.com/ChainSafe/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
+	"github.com/kinosang/ChainBridge/bindings/Bridge"
+	"github.com/kinosang/chainbridge-utils/core"
+	metrics "github.com/kinosang/chainbridge-utils/metrics/types"
+	"github.com/kinosang/chainbridge-utils/msg"
 )
 
 var _ core.Writer = &writer{}
 
-// https://github.com/ChainSafe/chainbridge-solidity/blob/b5ed13d9798feb7c340e737a726dd415b8815366/contracts/Bridge.sol#L20
+// https://github.com/kinosang/chainbridge-solidity/blob/b5ed13d9798feb7c340e737a726dd415b8815366/contracts/Bridge.sol#L20
 var PassedStatus uint8 = 2
 var TransferredStatus uint8 = 3
 var CancelledStatus uint8 = 4

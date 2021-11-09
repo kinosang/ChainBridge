@@ -11,14 +11,6 @@ import (
 	"testing"
 	"time"
 
-	bridge "github.com/ChainSafe/ChainBridge/bindings/Bridge"
-	"github.com/ChainSafe/ChainBridge/chains/ethereum"
-	utils "github.com/ChainSafe/ChainBridge/shared/ethereum"
-	ethtest "github.com/ChainSafe/ChainBridge/shared/ethereum/testing"
-	"github.com/ChainSafe/chainbridge-utils/core"
-	"github.com/ChainSafe/chainbridge-utils/crypto/secp256k1"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
-	"github.com/ChainSafe/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
 	eth "github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
@@ -26,6 +18,14 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/ethereum/go-ethereum/rpc"
+	bridge "github.com/kinosang/ChainBridge/bindings/Bridge"
+	"github.com/kinosang/ChainBridge/chains/ethereum"
+	utils "github.com/kinosang/ChainBridge/shared/ethereum"
+	ethtest "github.com/kinosang/ChainBridge/shared/ethereum/testing"
+	"github.com/kinosang/chainbridge-utils/core"
+	"github.com/kinosang/chainbridge-utils/crypto/secp256k1"
+	"github.com/kinosang/chainbridge-utils/keystore"
+	"github.com/kinosang/chainbridge-utils/msg"
 )
 
 var TestTimeout = time.Second * 30
