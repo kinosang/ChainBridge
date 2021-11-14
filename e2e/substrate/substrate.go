@@ -77,7 +77,8 @@ func WaitForProposalSuccessOrFail(t *testing.T, client *utils.Client, nonce type
 				events := utils.Events{}
 				err = types.EventRecordsRaw(chng.StorageData).DecodeEventRecords(client.Meta, &events)
 				if err != nil {
-					t.Fatal(err)
+					log.Error("Failed to process events in block", "err", err)
+					// return err
 				}
 
 				for _, evt := range events.ChainBridge_ProposalSucceeded {

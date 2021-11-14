@@ -41,7 +41,8 @@ func WaitForRemarkEvent(t *testing.T, client *utils.Client, hash types.Hash) {
 				events := utils.Events{}
 				err = types.EventRecordsRaw(chng.StorageData).DecodeEventRecords(client.Meta, &events)
 				if err != nil {
-					t.Fatal(err)
+					log15.Error("Failed to process events in block", "hash", hash.Hex(), "err", err)
+					// return err
 				}
 
 				for _, evt := range events.Example_Remark {
